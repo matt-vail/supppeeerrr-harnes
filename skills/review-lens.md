@@ -1,14 +1,11 @@
 ---
 name: review-lens
-description: Auto-activates during code review tasks to apply a consistent four-lens review framework and structured output.
-triggers:
-  - review
-  - code review
-  - look at this code
-  - what do you think of
-  - feedback on
-  - check this
-  - any issues with
+description: >
+  Four-lens code review framework — Correctness & Edge Cases, Clarity &
+  Readability, Structural Concerns, Test Coverage. Use for every code review
+  task where executable code is being evaluated for quality, correctness,
+  security, or maintainability. Produces prioritised findings (CRITICAL through
+  NIT) with file:line references and concrete fixes.
 ---
 
 # Skill: review-lens

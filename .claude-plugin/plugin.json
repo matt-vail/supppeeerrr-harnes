@@ -1,0 +1,20 @@
+{
+  "name": "supppeeerrr-harnes",
+  "version": "0.15.0",
+  "description": "A full expert team built on Anthropic agentic patterns: Orchestrator-Workers, ReAct, Evaluator-Optimizer, Fan-Out, and Human-in-the-Loop.",
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "engineering",
+    "orchestrator",
+    "tdd",
+    "security",
+    "devops",
+    "agentic-patterns",
+    "fan-out",
+    "evaluator-optimizer",
+    "human-in-the-loop"
+  ],
+  "commands": "./commands/",
+  "skills": "./skills/"
+}

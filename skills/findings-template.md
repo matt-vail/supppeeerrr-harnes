@@ -1,18 +1,12 @@
 ---
 name: findings-template
-description: Standard format for structured findings across security, accessibility, performance, and code review. Activates when reporting issues, vulnerabilities, audit results, or any prioritised list of problems found.
-triggers:
-  - finding
-  - findings
-  - vulnerability
-  - issue found
-  - audit result
-  - problems found
-  - review results
-  - security issue
-  - accessibility issue
-  - performance issue
-  - report
+description: >
+  Standard structured format for findings across security reviews, accessibility
+  audits, performance profiling, and code reviews. Use whenever producing a
+  prioritised list of problems, vulnerabilities, or audit results. Defines
+  CRITICAL through NIT priority levels, the per-finding block format (Location,
+  Asset, Finding, Fix, Verify), and the summary line. Ensures findings are
+  comparable, trackable, and routable across agents and sessions.
 ---
 
 # Skill: findings-template

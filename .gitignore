@@ -1,0 +1,16 @@
+# Agent memory runtime files
+# Session-specific and may contain sensitive codebase context — never commit
+agent-memory/episodic.md
+agent-memory/episodic-archive.md
+agent-memory/graph.md
+agent-memory/repo-map.md
+agent-memory/scratchpad/
+
+# Local todo tracking
+todo/
+
+# Local metrics and benchmark results
+metrics/
+
+# Claude Code local settings — never commit
+.claude/settings.local.json
