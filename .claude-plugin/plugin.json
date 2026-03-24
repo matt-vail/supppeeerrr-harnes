@@ -15,7 +15,7 @@
     "evaluator-optimizer",
     "human-in-the-loop"
   ],
-  "agents": "./agents/",
-  "commands": "./commands/",
-  "skills": "./skills/"
+  "agents": "./agents",
+  "commands": "./commands",
+  "skills": "./skills"
 }
