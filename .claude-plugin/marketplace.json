@@ -9,7 +9,10 @@
   "plugins": [
     {
       "name": "supppeeerrr-harnes",
-      "source": "./",
+      "source": {
+        "source": "github",
+        "repo": "matt-vail/supppeeerrr-harnes"
+      },
       "description": "17 commands · 18 specialist agents · 16 prompt skills. Full expert team: architect, security, performance, TDD, DevOps, accessibility, and more — all coordinated by a single orchestrator.",
       "author": {
         "name": "matt-vail"
