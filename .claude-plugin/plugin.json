@@ -2,6 +2,11 @@
   "name": "supppeeerrr-harnes",
   "version": "0.15.0",
   "description": "A full expert team built on Anthropic agentic patterns: Orchestrator-Workers, ReAct, Evaluator-Optimizer, Fan-Out, and Human-in-the-Loop.",
+  "author": {
+    "name": "matt-vail"
+  },
+  "homepage": "https://github.com/matt-vail/supppeeerrr-harnes",
+  "repository": "https://github.com/matt-vail/supppeeerrr-harnes",
   "license": "MIT",
   "keywords": [
     "agents",
@@ -14,8 +19,5 @@
     "fan-out",
     "evaluator-optimizer",
     "human-in-the-loop"
-  ],
-  "agents": "./agents",
-  "commands": "./commands",
-  "skills": "./skills"
+  ]
 }
