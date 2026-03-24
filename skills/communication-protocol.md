@@ -35,11 +35,19 @@ Used when the orchestrator assigns a bounded subtask to one specialist.
   <out-of-scope>{what to explicitly ignore}</out-of-scope>
   <related-nodes>{comma-separated graph node IDs or "none"}</related-nodes>
   <detail>summary | full</detail>
+  <file-budget>{number}</file-budget>
   <model-hint>haiku | sonnet | opus | omit to use default</model-hint>
 </handoff>
 ```
 
-**Detail field:** `summary` = specialist returns key findings only (status, CRITICAL/HIGH items, blockers). `full` = specialist returns complete verbose output. Default to `summary` unless the task is complex, blocked, or involves CRITICAL findings requiring full evidence.
+**Detail field:** `summary` = specialist returns key findings only (status, CRITICAL/HIGH items, blockers). `full` = specialist returns complete verbose output with full evidence blocks.
+
+**Default: all HANDOFFs use `<detail>summary</detail>`.** The orchestrator upgrades to `<detail>full</detail>` only when:
+1. A CRITICAL finding requires full evidence to evaluate (e.g. a security vulnerability where the exploit path must be traced).
+2. The task is BLOCKED and the root cause is unclear from summary information alone.
+3. The user explicitly requests full output.
+
+Summary artifacts are 60–70% smaller. Full artifacts are a deliberate escalation, not the default.
 
 **Model-hint field (optional):** Guides model selection for this task. Omit to use the session default.
 - `haiku` — orientation lookups, documentation tasks, single-file reviews, simple formatting
@@ -58,6 +66,16 @@ Routing hint defaults (orchestrator guidance):
 | Security threat modeling | opus |
 | Architecture / ADR | opus |
 | Complex multi-domain /ship | opus for design stage, sonnet for implementation |
+
+**File-budget field:** Limits how many files the receiving specialist may read. Default budgets by model hint:
+- `haiku` tasks: 5 files
+- `sonnet` tasks: 15 files
+- `opus` tasks: 25 files
+
+Rules for specialists receiving a HANDOFF with a `<file-budget>`:
+1. Before reading any files, declare the list of files you intend to read and why.
+2. Stay within the budget. If the task genuinely requires more files, return `PARTIAL` with the list of additional files needed and why — do not silently exceed the budget.
+3. Prioritise files by relevance: config/schema/entry-point files first; implementation files second; test files only if the task requires test coverage analysis.
 
 **Rules:**
 - Every HANDOFF has exactly one recipient.
@@ -82,7 +100,7 @@ Used when a specialist returns completed work to the orchestrator.
   </content>
   <blockers>{if PARTIAL or BLOCKED — exactly what is needed to complete; "none" if COMPLETE}</blockers>
   <next-agent>{recommended next agent and why; "none" otherwise}</next-agent>
-  <graph-nodes>{new node IDs added to agent-memory/graph.md; "none" if nothing added}</graph-nodes>
+  <graph-nodes>{new node IDs added to ~/.supppeeerrr-harnes/agent-memory/graph.md; "none" if nothing added}</graph-nodes>
 </artifact>
 ```
 
@@ -103,7 +121,7 @@ Used when a decision benefits from multiple specialist perspectives before a cal
 - A specialist conflict cannot be resolved by the orchestrator alone.
 - A novel architecture decision with no prior ADR.
 
-**Huddle venue:** `agent-memory/scratchpad/supervised/HUDDLE-{NNN}.md` — always monitored by the orchestrator.
+**Huddle venue:** `~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/HUDDLE-{NNN}.md` — always monitored by the orchestrator.
 
 ```xml
 <huddle>

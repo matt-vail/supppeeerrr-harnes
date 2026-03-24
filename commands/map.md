@@ -11,7 +11,7 @@ Generate a structured orientation report for the current codebase and cache it f
 
 ## What it produces
 
-`code-archaeologist` explores the codebase and writes a structured report to `agent-memory/repo-map.md`. This file is the shared codebase index — all agents check it at task start before doing their own exploratory reads.
+`code-archaeologist` explores the codebase and writes a structured report to `~/.supppeeerrr-harnes/agent-memory/repo-map.md`. This file is the shared codebase index — all agents check it at task start before doing their own exploratory reads.
 
 The report contains:
 - What the system does
@@ -36,7 +36,7 @@ The report contains:
 ## Cache behaviour
 
 On every run:
-1. Check if `agent-memory/repo-map.md` exists.
+1. Check if `~/.supppeeerrr-harnes/agent-memory/repo-map.md` exists.
 2. If it exists and `--refresh` is not set: report the map age and ask whether to refresh or use the existing map.
 3. If it does not exist or `--refresh` is set: run the full exploration and write the new map.
 
@@ -62,11 +62,11 @@ The map file includes a `Generated:` timestamp at the top so agents and develope
 
 ## Output
 
-The map is written to `agent-memory/repo-map.md` and a summary is shown in the terminal. Subsequent agent runs read from that path instead of re-exploring the codebase.
+The map is written to `~/.supppeeerrr-harnes/agent-memory/repo-map.md` and a summary is shown in the terminal. Subsequent agent runs read from that path instead of re-exploring the codebase.
 
 ## Notes
 
 - Running `/map` before `/audit`, `/ship`, or `/code-review` significantly reduces context usage — agents read the cached map instead of re-exploring independently.
 - The map is a snapshot. After a large refactor or when the codebase adds new modules, run `/map --refresh`.
-- `agent-memory/repo-map.md` is gitignored — it is a local working file, not a committed artefact.
-- Agents that receive a HANDOFF for an unfamiliar codebase should check whether `agent-memory/repo-map.md` exists before starting their own exploration. If a recent map exists, read it instead of running a full Step 1–5 sequence.
+- `~/.supppeeerrr-harnes/agent-memory/repo-map.md` is gitignored — it is a local working file, not a committed artefact.
+- Agents that receive a HANDOFF for an unfamiliar codebase should check whether `~/.supppeeerrr-harnes/agent-memory/repo-map.md` exists before starting their own exploration. If a recent map exists, read it instead of running a full Step 1–5 sequence.

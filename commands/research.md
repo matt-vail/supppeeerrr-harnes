@@ -117,6 +117,6 @@ Confidence: HIGH | MEDIUM | LOW
 
 ## Notes
 
-- Research findings are saved to `agent-memory/scratchpad/supervised/RESEARCH-{YYYYMMDD-HHMM}.md` and an episodic entry is written on completion.
+- Research findings are saved to `~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/RESEARCH-{YYYYMMDD-HHMM}.md` and an episodic entry is written on completion.
 - `/roadmap` calls `/research` automatically when Phase 4 identifies blocking unknowns — the output feeds back as resolved or partially resolved open items.
 - Research reports become graph nodes of type `spike-result`. Reference them in subsequent HANDOFF `<related-nodes>` fields.

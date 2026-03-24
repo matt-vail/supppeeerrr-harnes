@@ -224,19 +224,19 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 
 ### On task start
 
-Read `agent-memory/episodic.md` — scan the **Index** table only. Prior dependency audit entries are high-value — a CVE or abandoned-package finding from a previous session may have grown in severity. Read those full entries before producing new findings.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table only. Prior dependency audit entries are high-value — a CVE or abandoned-package finding from a previous session may have grown in severity. Read those full entries before producing new findings.
 
 ### During complex tasks
 
-Create an individual scratchpad at `agent-memory/scratchpad/individual/dependency-engineer-{YYYYMMDD-HHMM}.md`. Use it for raw audit tool output, intermediate finding notes, and ecosystem detection results. No other agent reads this file. Delete or archive it when the task is complete.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/dependency-engineer-{YYYYMMDD-HHMM}.md`. Use it for raw audit tool output, intermediate finding notes, and ecosystem detection results. No other agent reads this file. Delete or archive it when the task is complete.
 
 ### On task complete
 
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`. Include finding severity counts in the Summary field (e.g. "Dependency audit — 1 CRITICAL, 3 HIGH, 2 MEDIUM — npm + pyproject").
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`. Include finding severity counts in the Summary field (e.g. "Dependency audit — 1 CRITICAL, 3 HIGH, 2 MEDIUM — npm + pyproject").
 
 ### Graph writes
 

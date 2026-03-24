@@ -4,7 +4,7 @@ Authoritative format spec for all agent memory. Read this before writing to any 
 
 ## ⚠️ Check config first — always
 
-Before any memory operation (read or write), check `agent-memory/config.md`.
+Before any memory operation (read or write), check `.supppeeerrr-harnes/agent-memory/config.md`.
 
 - If `MEMORY_ENABLED: true` — proceed normally.
 - If `MEMORY_ENABLED: false` — skip all memory operations. Do not read episodic, do not write entries, do not create scratchpads, do not update the graph. Existing files are preserved but must not be accessed.
@@ -76,12 +76,12 @@ Appended below the `---` separator, newest at bottom:
 
 ---
 
-## Scratchpads (`scratchpad/`)
+## Scratchpads (`.supppeeerrr-harnes/agent-memory/scratchpad/`)
 
-### Individual — `scratchpad/individual/{agent-name}-{YYYYMMDD-HHMM}.md`
+### Individual — `.supppeeerrr-harnes/agent-memory/scratchpad/individual/{agent-name}-{YYYYMMDD-HHMM}.md`
 Private to one agent instance for one task. No format required — working notes only. Delete or archive on task complete.
 
-### Team — `scratchpad/team/{agent-type}.md`
+### Team — `.supppeeerrr-harnes/agent-memory/scratchpad/team/{agent-type}.md`
 Created by orchestrator when fanning out multiple instances of the same agent type. All instances read and write. Orchestrator passive.
 
 ```
@@ -95,7 +95,7 @@ Created: {timestamp} | Agents: {list}
 {agents record agreed directions here}
 ```
 
-### Supervised — `scratchpad/supervised/{TASK-ID}.md`
+### Supervised — `.supppeeerrr-harnes/agent-memory/scratchpad/supervised/{TASK-ID}.md`
 Created and actively monitored by orchestrator for complex tasks. **Every write to this directory is echoed to the terminal by the PostToolUse hook.** Orchestrator reviews after every write, corrects drift, and updates Current Direction.
 
 ```

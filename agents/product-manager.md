@@ -186,17 +186,17 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 ## Memory protocol
 
 ### On task start
-Read `agent-memory/episodic.md` — scan the **Index** table only. Prior product work — previous scope confirmations, scope changes, and stakeholder decisions — is critical context. Read those full entries before beginning elicitation.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table only. Prior product work — previous scope confirmations, scope changes, and stakeholder decisions — is critical context. Read those full entries before beginning elicitation.
 
 ### During complex tasks
-Create an individual scratchpad at `agent-memory/scratchpad/individual/product-manager-{YYYYMMDD-HHMM}.md`. Use it for elicitation notes, stakeholder map drafts, and the working assumption register. No other agent reads this file. Delete or archive it when the task is complete.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/product-manager-{YYYYMMDD-HHMM}.md`. Use it for elicitation notes, stakeholder map drafts, and the working assumption register. No other agent reads this file. Delete or archive it when the task is complete.
 
 ### On task complete
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`. Include the ticket ID and confirmed scope phase in the Summary field.
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`. Include the ticket ID and confirmed scope phase in the Summary field.
 
 ### Graph writes
 Confirmed stories depend on stakeholder decisions and may block implementation tasks. Add edges to link stories to the decisions that drive them and the implementation tasks they unblock.

@@ -353,23 +353,23 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 
 ### On task start
 
-Read `agent-memory/episodic.md` — scan the **Index** table for prior entries on this ticket, feature, or related artifact. If prior review sessions exist for the same spec or codebase area, read those full entries before starting. Prior pre-implementation reviews reveal direction risks that recurred. Prior post-implementation reviews reveal recurring delivery gaps — patterns worth watching for immediately.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table for prior entries on this ticket, feature, or related artifact. If prior review sessions exist for the same spec or codebase area, read those full entries before starting. Prior pre-implementation reviews reveal direction risks that recurred. Prior post-implementation reviews reveal recurring delivery gaps — patterns worth watching for immediately.
 
 ### During complex tasks
 
-Create an individual scratchpad at `agent-memory/scratchpad/individual/reviewer-{YYYYMMDD-HHMM}.md`. Use it for mode classification notes, lens observations in progress, coverage matrix drafts, and cycle tracking. No other agent reads this file.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/reviewer-{YYYYMMDD-HHMM}.md`. Use it for mode classification notes, lens observations in progress, coverage matrix drafts, and cycle tracking. No other agent reads this file.
 
 ### On task complete
 
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`. In the Outcome field, include: mode used, finding counts by level (pre-implementation) or coverage counts by status (post-implementation), and any recurring gaps found that appeared in prior sessions.
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`. In the Outcome field, include: mode used, finding counts by level (pre-implementation) or coverage counts by status (post-implementation), and any recurring gaps found that appeared in prior sessions.
 
 ### Graph writes
 
-CRITICAL and HIGH findings that trace to a prior architectural decision, ADR, or outstanding task should be added to `agent-memory/graph.md` as FINDING nodes. Link to the task that introduced the gap and the task that resolves it. Add DELIVERY GAP nodes for post-implementation MISSING items that become tracked debt.
+CRITICAL and HIGH findings that trace to a prior architectural decision, ADR, or outstanding task should be added to `~/.supppeeerrr-harnes/agent-memory/graph.md` as FINDING nodes. Link to the task that introduced the gap and the task that resolves it. Add DELIVERY GAP nodes for post-implementation MISSING items that become tracked debt.
 
 ---
 

@@ -142,20 +142,20 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 ## Memory protocol
 
 ### On task start
-Read `agent-memory/episodic.md` — scan the **Index** table only. Check for prior entries matching this ticket number or a related domain. Read a full entry only if the index shows directly relevant prior work.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table only. Check for prior entries matching this ticket number or a related domain. Read a full entry only if the index shows directly relevant prior work.
 
 ### During complex tasks
-Create an individual scratchpad at `agent-memory/scratchpad/individual/frontend-engineer-{YYYYMMDD-HHMM}.md`. Use it for working notes, hypothesis tracking, and intermediate state. No other agent reads this file. Delete or archive it when the task is complete.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/frontend-engineer-{YYYYMMDD-HHMM}.md`. Use it for working notes, hypothesis tracking, and intermediate state. No other agent reads this file. Delete or archive it when the task is complete.
 
 ### On task complete
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`.
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`.
 
 ### Graph writes
-When your output resolves, blocks, depends on, or contradicts an existing node — add the relationship to `agent-memory/graph.md`. Add your task as a node first if not already present.
+When your output resolves, blocks, depends on, or contradicts an existing node — add the relationship to `~/.supppeeerrr-harnes/agent-memory/graph.md`. Add your task as a node first if not already present.
 
 ## Tone
 

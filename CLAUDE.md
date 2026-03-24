@@ -20,11 +20,11 @@ A Claude Code plugin providing a full expert engineering team built on Anthropic
 - `commands/` — 17 slash commands
 - `skills/` — 16 prompt skill files
 - `hooks/` — PostToolUse automation
-- `agent-memory/` — persistent agent memory (episodic, graph, scratchpad)
+- `agent-memory/` — template files (config.md, README.md) committed to the plugin repo; runtime memory goes to `~/.supppeeerrr-harnes/agent-memory/` in the user's project
 - `docs/` — ADRs and agentic design references
 
 ## Memory system
-Agents read `agent-memory/episodic.md` (Index table only) at task start and write one entry on task complete. Relationships go in `agent-memory/graph.md`. Full format spec in `agent-memory/README.md`.
+Agents read `~/.supppeeerrr-harnes/agent-memory/episodic.md` (Index table only) at task start and write one entry on task complete. Relationships go in `~/.supppeeerrr-harnes/agent-memory/graph.md`. Full format spec in `agent-memory/README.md`.
 
 ## Non-negotiables
 - Human-in-the-Loop gates are hard stops — never proceed past a trigger without explicit human confirmation

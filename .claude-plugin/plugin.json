@@ -16,5 +16,5 @@
     "human-in-the-loop"
   ],
   "commands": "./commands/",
-  "skills": "./skills/"
+    "skills": "./skills/"
 }

@@ -102,7 +102,7 @@ Assumptions:
 
 **HitL gate:** Present the complete roadmap. Do not declare it confirmed until the user explicitly approves.
 
-The roadmap is saved to `agent-memory/scratchpad/supervised/ROADMAP-{YYYYMMDD-HHMM}.md`.
+The roadmap is saved to `~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/ROADMAP-{YYYYMMDD-HHMM}.md`.
 
 ## Usage
 

@@ -6,6 +6,40 @@ Orchestrate the full team to take a feature from idea to production-ready code: 
 
 Use `/ship` when you are building something net-new and want the full team involved from the start — not bolted on at the end. It is slower than `/generate` but produces significantly higher-quality output because each specialist reviews their domain before the feature is "done".
 
+## Stage Gate Check
+
+Before the pipeline starts, the orchestrator evaluates each stage against its condition. Stages whose condition is false are **skipped entirely** — not shortened, not summarised, skipped. This runs before any specialist is invoked.
+
+| Stage | Condition to run |
+|---|---|
+| Stage 1 — Design (api-designer) | New endpoint OR new component props OR new exported function signature |
+| Stage 1b — Security threat model (security-engineer) | Change touches auth, user input handling, or data persistence |
+| Stage 5 — Docs (tech-writer) | Public interface changed OR user-visible behaviour changed |
+| Stage 6 — Operations (devops-engineer) | Deployment is explicitly intended (user says "deploy", "release", "production") |
+| Stage 6b — Observability (observability-engineer) | New endpoints or background jobs added |
+
+Always-run stages (no condition): Stage 2 — Implementation, Stage 3 — Tests (tdd-coach), Stage 4 — Review (reviewer).
+
+**Pre-pipeline output (required):** Before invoking any specialist, surface the gate evaluation to the user. Example:
+
+```
+/ship pipeline for: Add pagination to /users endpoint
+  Stage 1  — Design:          SKIP (no new interface — modifying existing endpoint)
+  Stage 1b — Security:        RUN  (touches query parameters — input handling)
+  Stage 2  — Implementation:  RUN
+  Stage 3  — Tests:           RUN
+  Stage 4  — Review:          RUN
+  Stage 5  — Docs:            SKIP (no public interface change)
+  Stage 6  — Operations:      SKIP (no deployment indicated)
+  Stage 6b — Observability:   SKIP (no new endpoints added)
+Estimated specialists: 3 (vs 8 for --full without gates)
+Proceed? [yes/no]
+```
+
+This is a **Human-in-the-Loop confirmation gate.** Do not proceed until the user confirms. The user may override — add or remove stages — before confirming.
+
+---
+
 ## Stages
 
 ### Stage 1 — Design (api-designer + security-engineer)
@@ -33,6 +67,17 @@ Before any code is written:
 3. Do not proceed to review until the suite is green.
 
 ### Stage 4 — Review (reviewer + specialists)
+
+**Review mode (configurable):**
+- Default: DIFF mode — reviewer reviews only changed lines plus 20 lines of surrounding context.
+- Override: pass --full-files to the /ship command to review entire files regardless of diff.
+
+Diff mode behaviour:
+1. Run `git diff HEAD` (or `git diff --staged` if changes are staged) to get changed lines.
+2. If no git diff is available (untracked files, no git repo), fall back to full-file mode automatically.
+3. Pass the diff output + 20 lines surrounding context per hunk to the reviewer.
+4. Full file read only if: the diff references a type, function, or class defined in another unchanged file that is critical to understanding the change.
+5. State at the start of review output: "Review mode: DIFF (N lines changed across M files)" or "Review mode: FULL FILES (--full-files flag set)"
 
 1. `reviewer` performs a full four-lens review of the implementation and tests.
 2. Escalate findings to domain specialists as needed:

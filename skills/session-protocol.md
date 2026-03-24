@@ -104,9 +104,9 @@ A supervised scratchpad is stale when:
 The file naming convention makes this unambiguous:
 
 ```
-agent-memory/scratchpad/supervised/TASK-{NNN}.md               # active task scratchpad
-agent-memory/scratchpad/supervised/HUDDLE-{NNN}.md             # active huddle scratchpad
-agent-memory/scratchpad/supervised/INCIDENT-{YYYYMMDD-HHMM}.md # incident scratchpad
+~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/TASK-{NNN}.md               # active task scratchpad
+~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/HUDDLE-{NNN}.md             # active huddle scratchpad
+~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/INCIDENT-{YYYYMMDD-HHMM}.md # incident scratchpad
 ```
 
 At session start, when scanning supervised scratchpads: only load a scratchpad if it contains a SESSION-RESUME block dated within the last 7 days OR if the orchestrator is actively working on that TASK-ID in the current session.

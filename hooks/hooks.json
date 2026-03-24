@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 -c \"import sys,json,subprocess; d=json.load(sys.stdin); fp=d.get('tool_input',{}).get('file_path',''); (print('\\n=== SUPERVISED SCRATCHPAD UPDATE ==='), subprocess.run(['cat', fp]), print('=== END SUPERVISED SCRATCHPAD ===\\n')) if 'scratchpad/supervised' in fp else None\""
+            "command": "python3 -c \"import sys,json,subprocess; d=json.load(sys.stdin); fp=d.get('tool_input',{}).get('file_path',''); (print('\\n=== SUPERVISED SCRATCHPAD UPDATE ==='), subprocess.run(['cat', fp]), print('=== END SUPERVISED SCRATCHPAD ===\\n')) if '.supppeeerrr-harnes/agent-memory/scratchpad/supervised' in fp else None\""
           }
         ]
       }

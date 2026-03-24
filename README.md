@@ -20,28 +20,28 @@ Built on Anthropic agentic patterns — **Orchestrator-Workers**, **ReAct**, **E
 
 ## 🚀 Getting Started
 
-Clone and load — that's it:
+**1. Install from the marketplace** — inside Claude Code, run once:
 
-```bash
-git clone https://github.com/matt-vail/supppeeerrr-harnes
-claude --plugin-dir ./supppeeerrr-harnes
+```
+/plugin marketplace add matt-vail/supppeeerrr-harnes
+/plugin install supppeeerrr-harnes@supppeeerrr-harnes
 ```
 
-The repo ships with the full `agent-memory/` directory structure and `.gitignore` already in place. Nothing to configure.
+**2. Then run these two commands in your project:**
 
-Then run these two commands once in your project if you want to have a reference map and confirm memory:
+```
+/agent-memory status
+```
+Initialises memory on first run and confirms it's active.
 
 ```
 /map
 ```
 Indexes your codebase so agents don't re-explore on every task.
 
-```
-/agent-memory status
-```
-Confirms memory is active and shows the episodic log.
+That's it. Pick the command that matches your task — all commands route through the orchestrator, you never call agents directly.
 
-After that, pick the command that matches your task. All commands route through the orchestrator — you never call agents directly.
+> **Updates:** Run `/plugin marketplace update` whenever you want the latest version.
 
 ---
 
@@ -150,11 +150,11 @@ Commands are the entry points. Each one orchestrates a multi-agent pipeline behi
 
 ## 💾 Agent Memory
 
-The plugin maintains persistent memory across sessions — agents pick up where they left off. Memory lives in `agent-memory/` inside the plugin repo — it's already there when you clone.
+The plugin maintains persistent memory across sessions — agents pick up where they left off. All memory lives at `~/.supppeeerrr-harnes/agent-memory/`, initialised automatically on first `/agent-memory status` run. It's a single user-level hidden directory — nothing goes into your project repos.
 
 ### Memory types
 
-#### Episodic log (`agent-memory/episodic.md`)
+#### Episodic log (`~/.supppeeerrr-harnes/agent-memory/episodic.md`)
 An indexed log of every completed task. Each entry records: what agent did it, what changed, which files were affected, and the outcome. Agents read the index at task start to pick up prior context.
 
 ```
@@ -165,7 +165,7 @@ An indexed log of every completed task. Each entry records: what agent did it, w
 
 Entries are **immutable** — to correct one, write a new entry with `Corrects: #NNN`.
 
-#### Graph (`agent-memory/graph.md`)
+#### Graph (`~/.supppeeerrr-harnes/agent-memory/graph.md`)
 Tracks relationships between tasks, findings, and decisions. When a security finding is resolved, an edge connects the finding node to the task that fixed it. Useful for understanding why something was done.
 
 ```
@@ -174,7 +174,7 @@ Tracks relationships between tasks, findings, and decisions. When a security fin
 | TASK-042 | resolves | FINDING-003 | JWT rotation closes the session hijack risk |
 ```
 
-#### Scratchpads (`agent-memory/scratchpad/`)
+#### Scratchpads (`~/.supppeeerrr-harnes/agent-memory/scratchpad/`)
 
 Three types of working notes — automatically created and cleaned up by agents:
 
@@ -186,7 +186,7 @@ Three types of working notes — automatically created and cleaned up by agents:
 
 > **Supervised scratchpad writes are surfaced to your terminal by the PostToolUse hook.** This is intentional — it lets you see the orchestrator's working state on complex tasks without having to ask.
 
-#### Config (`agent-memory/config.md`)
+#### Config (`~/.supppeeerrr-harnes/agent-memory/config.md`)
 Controls whether memory is active. Agents check this before every memory operation.
 
 ```
@@ -203,19 +203,9 @@ MEMORY_ENABLED: true
 /agent-memory on                  # Re-enable memory
 ```
 
-### What's gitignored
+### Isolation
 
-Runtime memory files are never committed to your repo:
-
-```
-agent-memory/episodic.md
-agent-memory/episodic-archive.md
-agent-memory/graph.md
-agent-memory/repo-map.md
-agent-memory/scratchpad/
-```
-
-Only `config.md` and `README.md` (the templates) are committed to the plugin repo. Your project's memory stays in your project.
+Memory lives at `~/.supppeeerrr-harnes/agent-memory/` — the user's home directory, not inside any project repo. Nothing is ever added to your project's files or version control.
 
 ---
 

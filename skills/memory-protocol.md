@@ -11,13 +11,13 @@ description: >
 
 # Skill: memory-protocol
 
-Before any memory operation, check `agent-memory/config.md`. If `MEMORY_ENABLED: false`, skip everything in this skill.
+Before any memory operation, check `~/.supppeeerrr-harnes/agent-memory/config.md`. If `MEMORY_ENABLED: false`, skip everything in this skill.
 
 ---
 
 ## On task start
 
-1. Read `agent-memory/episodic.md` — scan the **Index** table only.
+1. Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table only.
 2. Check for rows matching the current ticket number or related domain.
 3. If a relevant row exists, read that full entry before proceeding.
 4. Do not read full entries speculatively — only when the index confirms relevance.
@@ -30,7 +30,7 @@ Before any memory operation, check `agent-memory/config.md`. If `MEMORY_ENABLED:
 
 Create an individual scratchpad at:
 ```
-agent-memory/scratchpad/individual/{your-agent-name}-{YYYYMMDD-HHMM}.md
+~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/{your-agent-name}-{YYYYMMDD-HHMM}.md
 ```
 
 Use it for working notes, hypothesis tracking, and intermediate state. No other agent reads this file. Delete or archive it when the task is complete.
@@ -41,7 +41,7 @@ Use it for working notes, hypothesis tracking, and intermediate state. No other 
 
 ## On task complete
 
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 
 **Step 1 — Add an index row** at the top of the Index table (newest first):
 ```
@@ -93,7 +93,7 @@ This step is only triggered when the index scan reveals a relevant prior failure
 
 ## Graph writes
 
-When your output **resolves**, **blocks**, **depends on**, **surfaces**, or **contradicts** an existing node — add the relationship to `agent-memory/graph.md`.
+When your output **resolves**, **blocks**, **depends on**, **surfaces**, or **contradicts** an existing node — add the relationship to `~/.supppeeerrr-harnes/agent-memory/graph.md`.
 
 **Step 1 — Add a node** (if your task is not already there):
 ```

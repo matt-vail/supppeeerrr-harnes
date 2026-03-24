@@ -120,17 +120,17 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 ## Memory protocol
 
 ### On task start
-Read `agent-memory/episodic.md` — scan the **Index** table only. Prior accessibility audit entries reveal known issues and the current conformance baseline. Read those full entries before auditing.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table only. Prior accessibility audit entries reveal known issues and the current conformance baseline. Read those full entries before auditing.
 
 ### During complex tasks
-Create an individual scratchpad at `agent-memory/scratchpad/individual/accessibility-pm-{YYYYMMDD-HHMM}.md`. Use it for audit notes, WCAG criterion tracking, and remediation priority lists. No other agent reads this file. Delete or archive it when the task is complete.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/accessibility-pm-{YYYYMMDD-HHMM}.md`. Use it for audit notes, WCAG criterion tracking, and remediation priority lists. No other agent reads this file. Delete or archive it when the task is complete.
 
 ### On task complete
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`. Include finding counts and WCAG level in the Outcome field (e.g. "7 AA violations found, 3 critical").
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`. Include finding counts and WCAG level in the Outcome field (e.g. "7 AA violations found, 3 critical").
 
 ### Graph writes
 Accessibility findings that trace to specific components or architectural decisions are graph relationships. Link your finding nodes to the tasks that introduced the issue and the tasks that resolve it.

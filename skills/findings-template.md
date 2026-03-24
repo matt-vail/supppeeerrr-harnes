@@ -76,7 +76,7 @@ Then offer to apply fixes for any CRITICAL or HIGH findings directly.
 
 ## Graph entries
 
-CRITICAL and HIGH findings that trace to a specific task, decision, or prior incident should be added to `agent-memory/graph.md` as `finding` nodes, with edges to the tasks that surface or resolve them.
+CRITICAL and HIGH findings that trace to a specific task, decision, or prior incident should be added to `~/.supppeeerrr-harnes/agent-memory/graph.md` as `finding` nodes, with edges to the tasks that surface or resolve them.
 
 ```
 | FINDING-{NNN} | finding | {agent-name} | {one-line description} | {date} |

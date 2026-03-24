@@ -2,6 +2,18 @@
 
 Perform a structured review of the specified file(s) or diff and produce a prioritised list of findings.
 
+## Review mode (configurable)
+
+- Default: DIFF mode — reviews only changed lines plus 20 lines of surrounding context
+- Override: pass --full-files to review entire files regardless of diff
+
+Diff mode behaviour:
+1. Run `git diff HEAD` (or `git diff --staged` if changes are staged) to get changed lines.
+2. If no git diff is available (untracked files, no git repo), fall back to full-file mode automatically.
+3. Pass the diff output + 20 lines surrounding context per hunk to the reviewer.
+4. Full file read only if: the diff references a type, function, or class defined in another unchanged file that is critical to understanding the change.
+5. State at the start of review output: "Review mode: DIFF (N lines changed across M files)" or "Review mode: FULL FILES (--full-files flag set)"
+
 ## Review Dimensions
 
 Analyse the code across these four lenses, in order:

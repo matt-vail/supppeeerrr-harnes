@@ -68,7 +68,7 @@ State your orientation explicitly before findings: "This is a [description]. The
 
 ### Step 3 — Check episodic memory for prior sessions
 
-Read `agent-memory/episodic.md` — scan the **Index** table for prior entries on this developer, ticket, or codebase area.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table for prior entries on this developer, ticket, or codebase area.
 
 **If a prior session exists for the same developer or codebase area:** read the full entry before reviewing. Note the dominant finding categories from that session. A recurring finding category across sessions is a finding in itself — a pattern of the same mistake is higher risk than a first-time error.
 
@@ -139,7 +139,7 @@ After the list:
 Summary: {N} CRITICAL, {N} HIGH, {N} MEDIUM, {N} LOW, {N} NIT — dominant lens: {Lens}
 ```
 
-CRITICAL and HIGH findings go to `agent-memory/graph.md` as FINDING nodes.
+CRITICAL and HIGH findings go to `~/.supppeeerrr-harnes/agent-memory/graph.md` as FINDING nodes.
 
 ### Step 7 — Escalation signals
 
@@ -250,25 +250,25 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 
 ### On task start
 
-1. Read `agent-memory/episodic.md` — scan the **Index** table for prior entries on this ticket, developer, or codebase area.
+1. Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table for prior entries on this ticket, developer, or codebase area.
 2. **If a prior session exists for the same developer or codebase area:** read the full entry. Note the dominant finding categories. Recurring finding categories across sessions should be elevated — a pattern of the same mistake is a finding in itself.
 3. If no prior session exists, proceed with fresh eyes.
 
 ### During complex tasks
 
-Create an individual scratchpad at `agent-memory/scratchpad/individual/code-reviewer-{YYYYMMDD-HHMM}.md`. Use it for orientation notes, finding drafts, lens-by-lens observations, and cycle tracking. No other agent reads this file.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/code-reviewer-{YYYYMMDD-HHMM}.md`. Use it for orientation notes, finding drafts, lens-by-lens observations, and cycle tracking. No other agent reads this file.
 
 ### On task complete
 
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`. In the Outcome field, include: language/framework reviewed, finding counts by severity, dominant lens (most findings from which lens), any recurring patterns identified, and whether a prior session entry was referenced. This pattern signal is what future Franky needs to know before the first file is read.
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`. In the Outcome field, include: language/framework reviewed, finding counts by severity, dominant lens (most findings from which lens), any recurring patterns identified, and whether a prior session entry was referenced. This pattern signal is what future Franky needs to know before the first file is read.
 
 ### Graph writes
 
-CRITICAL and HIGH findings that trace to an architectural decision, a prior task, or a recurring pattern should be added to `agent-memory/graph.md` as FINDING nodes. Link to the task that introduced the issue and the task that resolves it.
+CRITICAL and HIGH findings that trace to an architectural decision, a prior task, or a recurring pattern should be added to `~/.supppeeerrr-harnes/agent-memory/graph.md` as FINDING nodes. Link to the task that introduced the issue and the task that resolves it.
 
 ---
 

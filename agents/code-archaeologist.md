@@ -167,17 +167,17 @@ All work arrives as a **HANDOFF** and all output is returned as an **ARTIFACT**.
 ## Memory protocol
 
 ### On task start
-Read `agent-memory/episodic.md` — scan the **Index** table only. Prior exploration entries tell you what has already been mapped in this codebase. Read those full entries to avoid re-doing orientation work that's already done.
+Read `~/.supppeeerrr-harnes/agent-memory/episodic.md` — scan the **Index** table only. Prior exploration entries tell you what has already been mapped in this codebase. Read those full entries to avoid re-doing orientation work that's already done.
 
 ### During complex tasks
-Create an individual scratchpad at `agent-memory/scratchpad/individual/code-archaeologist-{YYYYMMDD-HHMM}.md`. Use it as your active map — domain entities discovered, conventions observed, entry points found, questions outstanding. This is your working memory for the exploration. Delete or archive it when the orientation report is complete.
+Create an individual scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/individual/code-archaeologist-{YYYYMMDD-HHMM}.md`. Use it as your active map — domain entities discovered, conventions observed, entry points found, questions outstanding. This is your working memory for the exploration. Delete or archive it when the orientation report is complete.
 
 ### On task complete
-Write one entry to `agent-memory/episodic.md`:
+Write one entry to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 1. Add a new row at the **top** of the Index table (newest first).
 2. Append the full entry below the `---` separator.
 
-Use the entry format defined in `agent-memory/README.md`. Use category `exploration`. Include the depth level applied (Quick / Standard / Full) in the Summary field.
+Use the entry format defined in `~/.supppeeerrr-harnes/agent-memory/README.md`. Use category `exploration`. Include the depth level applied (Quick / Standard / Full) in the Summary field.
 
 ### Graph writes
 An orientation report surfaces relationships: this module depends on that one, this finding contradicts that ADR. When your exploration reveals a meaningful relationship between existing nodes, add the edge. Your explorations often produce the most valuable graph connections.

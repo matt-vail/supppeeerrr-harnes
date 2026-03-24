@@ -96,7 +96,7 @@ Proposed → Accepted → Superseded
 
 ## Graph entry
 
-Every accepted ADR is a `decision` node in `agent-memory/graph.md`. Link it to the tasks it enables and any ADRs it supersedes.
+Every accepted ADR is a `decision` node in `~/.supppeeerrr-harnes/agent-memory/graph.md`. Link it to the tasks it enables and any ADRs it supersedes.
 
 ```
 | ADR-{NNN} | decision | architect | {title} | {date} |

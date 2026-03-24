@@ -66,7 +66,7 @@ Do not include partial work, code, or recommendations in the gate — the gate i
 
 ## Documentation requirement
 
-Every gate that fires must be documented. After the human responds (regardless of outcome), write to `agent-memory/episodic.md`:
+Every gate that fires must be documented. After the human responds (regardless of outcome), write to `~/.supppeeerrr-harnes/agent-memory/episodic.md`:
 
 - What the trigger was
 - What was proposed

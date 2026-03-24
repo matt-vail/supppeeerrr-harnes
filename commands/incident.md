@@ -31,7 +31,7 @@ State clearly:
 
 Do not begin investigation until the symptom is stated precisely. Vague symptoms produce vague mitigations.
 
-Open a scratchpad at `agent-memory/scratchpad/supervised/INCIDENT-{YYYYMMDD-HHMM}.md` using the incident template:
+Open a scratchpad at `~/.supppeeerrr-harnes/agent-memory/scratchpad/supervised/INCIDENT-{YYYYMMDD-HHMM}.md` using the incident template:
 
 ```
 # Incident: [short description]

@@ -9,6 +9,12 @@ Work through a bug or unexpected behaviour using a disciplined hypothesis-testin
 - An intermittent error that you cannot reproduce reliably.
 - Performance degradation with no obvious cause.
 
+## Early termination (default ON)
+
+- If root cause is confirmed with high confidence in ReAct cycle 1 or 2: stop. Return the finding immediately. Do not continue hypothesising.
+- Confidence is HIGH when: the hypothesis predicts the exact observed symptom, a specific file:line is identified, and a fix can be stated concretely.
+- Only continue to further cycles if confidence is MEDIUM or LOW after the current cycle.
+
 ## Process
 
 ### Step 1 — Describe the symptom precisely

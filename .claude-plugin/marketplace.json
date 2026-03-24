@@ -1,0 +1,41 @@
+{
+  "name": "supppeeerrr-harnes",
+  "owner": {
+    "name": "matt-vail"
+  },
+  "metadata": {
+    "description": "A full expert engineering team built on Anthropic agentic patterns: Orchestrator-Workers, ReAct, Evaluator-Optimizer, Fan-Out/Fan-In, and Human-in-the-Loop."
+  },
+  "plugins": [
+    {
+      "name": "supppeeerrr-harnes",
+      "source": "./",
+      "description": "17 commands · 18 specialist agents · 16 prompt skills. Full expert team: architect, security, performance, TDD, DevOps, accessibility, and more — all coordinated by a single orchestrator.",
+      "author": {
+        "name": "matt-vail"
+      },
+      "homepage": "https://github.com/matt-vail/supppeeerrr-harnes",
+      "repository": "https://github.com/matt-vail/supppeeerrr-harnes",
+      "license": "MIT",
+      "keywords": [
+        "agents",
+        "engineering",
+        "orchestrator",
+        "tdd",
+        "security",
+        "devops",
+        "agentic-patterns",
+        "fan-out",
+        "evaluator-optimizer",
+        "human-in-the-loop"
+      ],
+      "category": "productivity",
+      "tags": [
+        "engineering-team",
+        "orchestrator",
+        "agentic-patterns",
+        "multi-agent"
+      ]
+    }
+  ]
+}
