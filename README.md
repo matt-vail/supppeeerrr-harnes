@@ -23,7 +23,6 @@ Built on Anthropic agentic patterns — **Orchestrator-Workers**, **ReAct**, **E
 **1. Install from the marketplace** — inside Claude Code, run once:
 
 ```
-/plugin marketplace add matt-vail/supppeeerrr-harnes
 /plugin install supppeeerrr-harnes@supppeeerrr-harnes
 ```
 
